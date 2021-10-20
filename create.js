@@ -1,5 +1,4 @@
 const { connect } = require('getstream');
-const { async } = require('regenerator-runtime');
 
 require('dotenv').config({path: './.env'});
 
@@ -107,7 +106,7 @@ const deleteReaction = async () => {
 const getReactions = async () => {
   await serverClient.reactions.filter({
     'activity_id': '41dcae17-2d14-11ec-8bbc-0ac74274a1c1'
-  }).then( r => console.log('GET REACTIONS', r.results[1].data))
+  }).then( r => console.log('GET REACTIONS', r))
 }
 
 
